@@ -1,3 +1,5 @@
+#include <malloc.h>
+
 /*
 链表 - 数据结构
 */
@@ -17,12 +19,12 @@ struct ListNode* initNode(int val) {
 struct ListNode* initLinkList() {
 	struct ListNode* head = initNode(0);
 	
-	struct ListNode* node1 = initNode(8);
-	struct ListNode* node2 = initNode(4);
-	struct ListNode* node3 = initNode(2);
-	struct ListNode* node4 = initNode(3);
-	struct ListNode* node5 = initNode(6);
-	struct ListNode* node6 = initNode(5);
+	struct ListNode* node1 = initNode(1);
+	struct ListNode* node2 = initNode(2);
+	struct ListNode* node3 = initNode(3);
+	struct ListNode* node4 = initNode(4);
+	struct ListNode* node5 = initNode(5);
+	struct ListNode* node6 = initNode(6);
 	
 	node6->next = NULL;
 	node5->next = node6;
