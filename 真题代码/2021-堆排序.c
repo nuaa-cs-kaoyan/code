@@ -31,6 +31,7 @@ int* adjust(int A[], int index, int value, int length) {
     // 下溯
 	while((leftChildIndex <= length && A[index] > A[leftChildIndex]) ||
           (leftChildIndex <= length && A[index] > A[rightChildIndex])){ // 存在子节点小于父节点
+        minChildIndex = leftChildIndex; 
         if(rightChildIndex <= length && A[leftChildIndex] > A[rightChildIndex]){ // 取最小的子节点
         	minChildIndex = rightChildIndex;
         }  
@@ -38,7 +39,7 @@ int* adjust(int A[], int index, int value, int length) {
 		A[minChildIndex] = A[index];
 		A[index] = A[0];
 		index = minChildIndex;
-		leftChildIndex = leftChildIndex * 2;
+		leftChildIndex = index * 2;
         rightChildIndex = leftChildIndex + 1;
 	}
 	return A;
