@@ -1,5 +1,5 @@
 /*
-ÄÏº½¼ÆËã»ú¿¼ÑĞ£º
+å—èˆªè®¡ç®—æœºè€ƒç ”ï¼š
 	https://gitee.com/wansho/awesome-nuaa-cs-kaoyan
 */
 
@@ -20,7 +20,7 @@ int* adjust(int A[], int index, int value, int length) {
 	int leftChildIndex = index * 2;
     int rightChildIndex = leftChildIndex + 1;
     int minChildIndex;
-    // ÉÏËİ
+    // ä¸Šæº¯
 	while(index != 1 && A[parentIndex] > A[index]){
 		A[0] = A[parentIndex];
 		A[parentIndex] = A[index];
@@ -28,11 +28,11 @@ int* adjust(int A[], int index, int value, int length) {
 		index = parentIndex;
 		parentIndex = index / 2;
 	}
-    // ÏÂËİ
+    // ä¸‹æº¯
 	while((leftChildIndex <= length && A[index] > A[leftChildIndex]) ||
-          (leftChildIndex <= length && A[index] > A[rightChildIndex])){ // ´æÔÚ×Ó½ÚµãĞ¡ÓÚ¸¸½Úµã
+          (leftChildIndex <= length && A[index] > A[rightChildIndex])){ // å­˜åœ¨å­èŠ‚ç‚¹å°äºçˆ¶èŠ‚ç‚¹
         minChildIndex = leftChildIndex; 
-        if(rightChildIndex <= length && A[leftChildIndex] > A[rightChildIndex]){ // È¡×îĞ¡µÄ×Ó½Úµã
+        if(rightChildIndex <= length && A[leftChildIndex] > A[rightChildIndex]){ // å–æœ€å°çš„å­èŠ‚ç‚¹
         	minChildIndex = rightChildIndex;
         }  
 		A[0] = A[minChildIndex];

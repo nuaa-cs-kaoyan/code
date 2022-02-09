@@ -1,7 +1,7 @@
-#include <malloc.h>
+#include <stdlib.h>
 
 /*
-Á´±í - Êı¾İ½á¹¹
+é“¾è¡¨ - æ•°æ®ç»“æ„
 */
 
 struct ListNode {
@@ -15,7 +15,7 @@ struct ListNode* initNode(int val) {
     return node;
 }
 
-// ³õÊ¼»¯Ò»¸ö´øÍ·½ÚµãµÄÁ´±í
+// åˆå§‹åŒ–ä¸€ä¸ªå¸¦å¤´èŠ‚ç‚¹çš„é“¾è¡¨
 struct ListNode* initLinkList() {
 	struct ListNode* head = initNode(0);
 	
@@ -35,7 +35,7 @@ struct ListNode* initLinkList() {
 	head->next = node1;
 }
 
-// ³õÊ¼»¯Ò»¸ö´øÍ·½ÚµãµÄÁ´±í µİÔö 2£¬4£¬6£¬8£¬10 
+// åˆå§‹åŒ–ä¸€ä¸ªå¸¦å¤´èŠ‚ç‚¹çš„é“¾è¡¨ é€’å¢ 2ï¼Œ4ï¼Œ6ï¼Œ8ï¼Œ10 
 struct ListNode* initLinkListASC() {
 	struct ListNode* head = initNode(0);
 	
@@ -53,7 +53,7 @@ struct ListNode* initLinkListASC() {
 	head->next = node1;
 }
 
-// ³õÊ¼»¯Ò»¸ö´øÍ·½ÚµãµÄÁ´±í µİ¼õ 100£¬99£¬98£¬97£¬96
+// åˆå§‹åŒ–ä¸€ä¸ªå¸¦å¤´èŠ‚ç‚¹çš„é“¾è¡¨ é€’å‡ 100ï¼Œ99ï¼Œ98ï¼Œ97ï¼Œ96
 struct ListNode* initLinkListDESC() {
 	struct ListNode* head = initNode(0);
 	

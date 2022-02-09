@@ -1,7 +1,7 @@
-#include <malloc.h>
+#include <stdlib.h>
 
 /*
-º¢×ÓĞÖµÜÊ÷ - Êı¾İ½á¹¹
+å­©å­å…„å¼Ÿæ ‘ - æ•°æ®ç»“æ„
 */
 
 struct TreeNode {

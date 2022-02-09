@@ -1,9 +1,9 @@
 /*
-ÄÏº½¼ÆËã»ú¿¼ÑÐ£º
+å—èˆªè®¡ç®—æœºè€ƒç ”ï¼š
 	https://gitee.com/wansho/awesome-nuaa-cs-kaoyan
 
-2021 ÕæÌâ-Á´±í£º
-	a Á´±íµÝÔö£¬b Á´±íµÝ¼õ£¬ºÏ²¢Á½¸öÁ´±í£¬ÏàÍ¬½Úµã±£ÁôÒ»¸ö£¬ºÏ²¢ºóÁ´±íµÝÔö¡£
+2021 çœŸé¢˜-é“¾è¡¨ï¼š
+	a é“¾è¡¨é€’å¢žï¼Œb é“¾è¡¨é€’å‡ï¼Œåˆå¹¶ä¸¤ä¸ªé“¾è¡¨ï¼Œç›¸åŒèŠ‚ç‚¹ä¿ç•™ä¸€ä¸ªï¼Œåˆå¹¶åŽé“¾è¡¨é€’å¢žã€‚
 */
 
 #include <stdio.h>
@@ -13,7 +13,7 @@
 #include <malloc.h>
 
 struct ListNode* merge(struct ListNode* a, struct ListNode* b) {
-	// ÏÈ¶Ô b ÄæÖÃ£¬Í·²å·¨ 
+	// å…ˆå¯¹ b é€†ç½®ï¼Œå¤´æ’æ³• 
 	struct ListNode* node = b->next;
 	b->next = NULL;
 	struct ListNode* tmp = NULL;
@@ -25,7 +25,7 @@ struct ListNode* merge(struct ListNode* a, struct ListNode* b) {
 		tmp->next = b->next;
 		b->next = tmp; 
 	} 
-	// ½« b ²åÈë a
+	// å°† b æ’å…¥ a
 	node = b->next;
 	while(node != NULL){
 		tmp = node;
