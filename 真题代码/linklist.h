@@ -11,7 +11,7 @@ struct ListNode {
 
 struct ListNode* initNode(int val) {
     struct ListNode* node = (struct ListNode*)malloc(sizeof(struct ListNode));
-	node->val = val;
+		node->val = val;
     return node;
 }
 
@@ -19,12 +19,12 @@ struct ListNode* initNode(int val) {
 struct ListNode* initLinkList() {
 	struct ListNode* head = initNode(0);
 	
-	struct ListNode* node1 = initNode(1);
-	struct ListNode* node2 = initNode(2);
-	struct ListNode* node3 = initNode(3);
-	struct ListNode* node4 = initNode(4);
-	struct ListNode* node5 = initNode(5);
-	struct ListNode* node6 = initNode(6);
+	struct ListNode* node1 = initNode(11);
+	struct ListNode* node2 = initNode(9);
+	struct ListNode* node3 = initNode(7);
+	struct ListNode* node4 = initNode(5);
+	struct ListNode* node5 = initNode(3);
+	struct ListNode* node6 = initNode(1);
 	
 	node6->next = NULL;
 	node5->next = node6;
@@ -33,6 +33,7 @@ struct ListNode* initLinkList() {
 	node2->next = node3;
 	node1->next = node2;
 	head->next = node1;
+	return head;
 }
 
 // 初始化一个带头节点的链表 递增 2，4，6，8，10 
@@ -51,6 +52,7 @@ struct ListNode* initLinkListASC() {
 	node2->next = node3;
 	node1->next = node2;
 	head->next = node1;
+	return head;
 }
 
 // 初始化一个带头节点的链表 递减 100，99，98，97，96
@@ -69,6 +71,7 @@ struct ListNode* initLinkListDESC() {
 	node2->next = node3;
 	node1->next = node2;
 	head->next = node1;
+	return head;
 }
 
 

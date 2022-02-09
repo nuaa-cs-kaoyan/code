@@ -5,7 +5,7 @@
 */
 
 struct TreeNode {
-    int val;
+  int val;
 	struct TreeNode* firstChild;
 	struct TreeNode* nextSibling;
 };
