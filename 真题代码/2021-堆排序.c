@@ -9,7 +9,7 @@
 #include "linklist.h"
 #include <limits.h>
 #include <math.h>
-#include <malloc.h>
+#include <stdlib.h>
 
 int* adjust(int A[], int index, int value, int length) {
 	if(A[index] == value){

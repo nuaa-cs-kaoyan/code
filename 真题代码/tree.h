@@ -10,10 +10,43 @@ struct TreeNode {
 	struct TreeNode* nextSibling;
 };
 
+struct BiTreeNode {
+  int val;
+	struct BiTreeNode* left;
+	struct BiTreeNode* right;
+};
+
 struct TreeNode* initNode(int val) {
-    struct TreeNode* node = (struct TreeNode*)malloc(sizeof(struct TreeNode));
+	struct TreeNode* node = (struct TreeNode*)malloc(sizeof(struct TreeNode));
 	node->val = val;
-    return node;
+	return node;
+}
+
+struct BiTreeNode* initBiTreeNode(int val) {
+	struct BiTreeNode* node = (struct BiTreeNode*)malloc(sizeof(struct BiTreeNode));
+	node->val = val;
+	return node;
+}
+
+struct BiTreeNode* initBiTree() {
+	struct BiTreeNode* a1 = initBiTreeNode(1);
+	struct BiTreeNode* a2 = initBiTreeNode(2);
+	struct BiTreeNode* a3 = initBiTreeNode(3);
+	struct BiTreeNode* a4 = initBiTreeNode(4);
+	struct BiTreeNode* a5 = initBiTreeNode(5);
+
+	a1->left = a2;
+	a1->right = a3;
+	a2->left = a4;
+	a2->right = a5;
+	a3->left = NULL;
+	a3->right = NULL;
+	a4->left = NULL;
+	a4->right = NULL;
+	a5->left = NULL;
+	a5->right = NULL;
+
+	return a1;
 }
 
 struct TreeNode* initTree() {
@@ -54,5 +87,3 @@ struct TreeNode* initTree() {
 
 	return a;
 }
-
-
