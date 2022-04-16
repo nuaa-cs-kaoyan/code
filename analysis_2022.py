@@ -34,7 +34,6 @@ def load_total_score_dataframe():
 def analysis_total_score():
     """已经剔除了退伍大学生计划的数据"""
     pd_data = load_total_score_dataframe()
-
     pd_data_group_describe = pd_data.groupby(["专业"]).describe()
     pd_data_group_describe.to_csv("2022-初复试总分分析.csv", encoding="utf8")
     print(pd_data_group_describe)
@@ -56,12 +55,13 @@ def analysis_chushi():
     pd_merge.columns = ["电子信息", "学硕_计科", "学硕_软工", "学硕_网安"]
 
     print(pd_merge)
-    ax = pd_merge.plot(figsize=(15, 13),
+    ax = pd_merge.plot(figsize=(15, 15),
                        kind='bar',
                        title=title_chushi,
                        width=0.8,
                        xlabel="分数区间",
-                       ylabel="录取人数")
+                       ylabel="录取人数",
+                       fontsize=15)
 
     for x, y in zip(x_index_chushi, pd_analysis_电子信息.tolist()):
         ax.text(x-0.3, y, y, ha = 'center',va = 'bottom',fontsize=15)
@@ -71,6 +71,9 @@ def analysis_chushi():
         ax.text(x+0.1, y, y, ha = 'center',va = 'bottom',fontsize=15)
     for x, y in zip(x_index_chushi, pd_analysis_学硕_网安.tolist()):
         ax.text(x+0.3, y, y, ha = 'center',va = 'bottom',fontsize=15)
+
+
+    ax.text(2, 18, "熊二学长(QQ: 321556185) 南航计算机考研\n 2022录取结果分析 - 初试总分分析", fontsize=25, color="red")
 
     fig = ax.get_figure()
     plt.show()
@@ -97,12 +100,13 @@ def analysis_fushi():
     pd_merge.columns = ["电子信息", "学硕_计科", "学硕_软工", "学硕_网安"]
 
     print(pd_merge)
-    ax = pd_merge.plot(figsize=(15, 13),
+    ax = pd_merge.plot(figsize=(15, 15),
                        kind='bar',
                        title=title_fushi,
                        width=0.8,
                        xlabel="分数区间",
-                       ylabel="录取人数")
+                       ylabel="录取人数",
+                       fontsize=15)
 
     for x, y in zip(x_index_fushi, pd_analysis_电子信息.tolist()):
         ax.text(x - 0.3, y, y, ha='center', va='bottom', fontsize=15)
@@ -113,6 +117,8 @@ def analysis_fushi():
     for x, y in zip(x_index_fushi, pd_analysis_学硕_网安.tolist()):
         ax.text(x + 0.3, y, y, ha='center', va='bottom', fontsize=15)
 
+    ax.text(2, 18, "熊二学长(QQ: 321556185) 南航计算机考研\n 2022录取结果分析 - 复试总分分析", fontsize=25, color="red")
+
     fig = ax.get_figure()
     plt.show()
     fig.savefig('2022复试.png', dip=500)
@@ -120,7 +126,7 @@ def analysis_fushi():
 
 
 if __name__ == "__main__":
-    # analysis_total_score()
+    analysis_total_score()
     analysis_chushi()
     analysis_fushi()
     pass
