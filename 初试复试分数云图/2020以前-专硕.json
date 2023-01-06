@@ -1,0 +1,113 @@
+option = {
+  series: [
+    {
+      name: '南航计算机考研-2020年前-专硕',
+      type: 'treemap',
+      visibleMin: 300,
+      label: {
+        show: true,
+        formatter: '{b}'
+      },
+      upperLabel: {
+        show: true,
+        height: 30
+      },
+      levels: [
+        {
+          itemStyle: {
+            borderColor: '#555',
+            borderWidth: 10,
+            gapWidth: 10
+          }
+        },
+        {
+          colorSaturation: [0.3, 0.6],
+          itemStyle: {
+            borderColorSaturation: 0.7,
+            gapWidth: 5,
+            borderWidth: 5
+          }
+        },
+        {
+          colorSaturation: [0.3, 0.5],
+          itemStyle: {
+            borderColorSaturation: 0.6,
+            gapWidth: 5
+          }
+        },
+        {
+          colorSaturation: [0.3, 0.5]
+        }
+      ],
+      leafDepth: 5,
+      data: [
+        {
+          name: '初试500分 * 50%（powered by 熊二学长，qq: 321556185）',
+          value: 500,
+          children: [
+            {
+              name: '数一：150分',
+              value: 150
+            },
+            {
+              name: '英一：100分',
+              value: 100
+            },
+            {
+              name: '政治：100分',
+              value: 100
+            },
+            {
+              name: '专业课-922：150分',
+              value: 150,
+              children: [
+                {
+                  name: '数据结构：75分',
+                  value: 75
+                },
+                {
+                  name: '操作系统：75分',
+                  value: 75
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: '复试300分*50%',
+          value: 300,
+          children: [
+            {
+              name: '笔试：150分',
+              value: 150,
+              children: [
+                {
+                  name: '编译原理和离散数学笔试：100分',
+                  value: 100,
+                  children: [
+                    {
+                      name: '编译原理：50分',
+                      value: 50
+                    },
+                    {
+                      name: '离散数学：50分',
+                      value: 50
+                    }
+                  ]
+                },
+                {
+                  name: '英语听力：50分笔试',
+                  value: 50
+                }
+              ]
+            },
+            {
+              name: '面试：150分\n包含: \n1. 自我介绍 \n2. 抽3个题目问答 \n3. 自由问答环节',
+              value: 150
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
