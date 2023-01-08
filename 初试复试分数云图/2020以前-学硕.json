@@ -1,7 +1,7 @@
 option = {
   series: [
     {
-      name: '南航计算机考研-2020年前-学硕',
+      name: '南航计算机考研-2020年前-学硕829',
       type: 'treemap',
       visibleMin: 300,
       label: {
@@ -78,7 +78,7 @@ option = {
           ]
         },
         {
-          name: '复试300分*50%',
+          name: '线下复试300分*50%',
           value: 300,
           children: [
             {
@@ -86,7 +86,7 @@ option = {
               value: 150,
               children: [
                 {
-                  name: '编译原理和离散数学笔试：100分',
+                  name: '编译和离散笔试：100分',
                   value: 100,
                   children: [
                     {
@@ -106,8 +106,22 @@ option = {
               ]
             },
             {
-              name: '面试：150分\n包含: \n1. 自我介绍 \n2. 抽3个题目问答 \n3. 自由问答环节',
-              value: 150
+              name: '面试：150分(子项分值未知)',
+              value: 150,
+              children: [
+                {
+                  name: '自我介绍\n分值未知',
+                  value: 50
+                },
+                {
+                  name: '抽五选三题目问答\n分值未知',
+                  value: 50
+                },
+                {
+                  name: '自由问答\n分值未知',
+                  value: 50
+                }
+              ]
             }
           ]
         }

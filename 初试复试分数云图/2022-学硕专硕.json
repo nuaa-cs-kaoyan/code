@@ -1,7 +1,7 @@
 option = {
   series: [
     {
-      name: '南航计算机考研-2020年前-专硕922',
+      name: '南航计算机考研-2022-829',
       type: 'treemap',
       visibleMin: 300,
       label: {
@@ -42,11 +42,11 @@ option = {
       leafDepth: 5,
       data: [
         {
-          name: '初试500分 * 50%（powered by 熊二学长，qq: 321556185）',
+          name: '初试500分 * 70%（powered by 熊二学长，qq: 321556185）',
           value: 500,
           children: [
             {
-              name: '数二：150分',
+              name: '数学：150分\n学硕数一，专硕数二',
               value: 150
             },
             {
@@ -58,64 +58,64 @@ option = {
               value: 100
             },
             {
-              name: '专业课-922：150分',
+              name: '专业课-829：150分',
               value: 150,
               children: [
                 {
-                  name: '数据结构：75分',
-                  value: 75
+                  name: '数据结构：50分',
+                  value: 50
                 },
                 {
-                  name: '操作系统：75分',
-                  value: 75
+                  name: '操作系统：50分',
+                  value: 50
+                },
+                {
+                  name: '计组：50分',
+                  value: 50
                 }
               ]
             }
           ]
         },
         {
-          name: '线下复试300分*50%',
+          name: '线上复试300分*30%(疫情)',
           value: 300,
           children: [
             {
-              name: '笔试：150分',
-              value: 150,
+              name: '面试：300分',
+              value: 300,
               children: [
                 {
-                  name: '编译和离散笔试：100分',
-                  value: 100,
+                  name: '英语：50分',
+                  value: 50,
                   children: [
                     {
-                      name: '编译原理：50分',
-                      value: 50
+                      name: '口语对话',
+                      value: 25
                     },
                     {
-                      name: '离散数学：50分',
-                      value: 50
+                      name: '科技论文翻译',
+                      value: 25
                     }
                   ]
                 },
                 {
-                  name: '英语听力：50分笔试',
-                  value: 50
-                }
-              ]
-            },
-            {
-              name: '面试：150分(子项分值未知)',
-              value: 150,
-              children: [
-                {
-                  name: '自我介绍\n分值未知',
-                  value: 50
-                },
-                {
-                  name: '抽五选三题目问答\n分值未知',
-                  value: 50
-                },
-                {
-                  name: '自由问答\n分值未知',
-                  value: 50
+                  name: '专业知识和综合能力：250分(具体分值未知)',
+                  value: 250,
+                  children: [
+                    {
+                      name: '编译原理和离散数学\n各选一题',
+                      value: 100
+                    },
+                    {
+                      name: '专业知识考察\n抽三题',
+                      value: 90
+                    },
+                    {
+                      name: '闲聊',
+                      value: 60
+                    }
+                  ]
                 }
               ]
             }
