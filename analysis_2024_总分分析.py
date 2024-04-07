@@ -34,7 +34,7 @@ def load_total_score_dataframe():
 def analysis_total_score():
     """已经剔除了退伍大学生计划的数据"""
     pd_data = load_total_score_dataframe()
-    pd_data_group_describe = pd_data.groupby(["专业"]).describe()
+    pd_data_group_describe = pd_data.groupby(["专业"]).describe().round(1)
     pd_data_group_describe.to_csv("2024-初复试总分分析.csv", encoding="utf8")
     print(pd_data_group_describe)
 
